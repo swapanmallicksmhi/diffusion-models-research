@@ -1,0 +1,6 @@
+[project]
+site_name = "Diffusion Models | Research Atlas"
+site_description = "DDPM, score-based diffusion, and generative data assimilation for weather and climate"
+site_author = "Research community"
+# Customize after choosing your GitHub username:
+# site_url = "https://YOUR_USERNAME.github.io/diffusion-models-research/"
