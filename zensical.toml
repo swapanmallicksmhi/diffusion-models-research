@@ -1,6 +1,245 @@
+# ============================================================
+# DIFFUSION MODELS | RESEARCH ATLAS
+# ============================================================
+#
+# Scientific documentation website
+#
+# Topics:
+#   1. Mathematical Foundations
+#   2. Denoising Diffusion Probabilistic Models (DDPM)
+#   3. Score-Based Diffusion Models
+#   4. Diffusion Models for Data Assimilation
+#   5. Weather and Climate Applications
+#   6. Research Literature and Reading Lists
+#
+# Framework : Zensical
+# Hosting   : GitHub Pages
+# Author    : Swapan Mallick
+# ============================================================
+
+
+# ------------------------------------------------------------
+# 1. PROJECT INFORMATION
+# ------------------------------------------------------------
+
 [project]
+
 site_name = "Diffusion Models | Research Atlas"
-site_description = "DDPM, score-based diffusion, and generative data assimilation for weather and climate"
-site_author = "Research community"
-# Customize after choosing your GitHub username:
-# site_url = "https://YOUR_USERNAME.github.io/diffusion-models-research/"
+
+site_description = "A scientific research atlas covering mathematical foundations, DDPM, score-based generative models, diffusion-based data assimilation, and applications in numerical weather prediction and climate science."
+
+site_author = "Swapan Mallick"
+
+site_url = "https://swapanmallicksmhi.github.io/diffusion-models-research/"
+
+copyright = "Copyright © 2026 Swapan Mallick"
+
+docs_dir = "docs"
+site_dir = "site"
+
+use_directory_urls = true
+
+
+# ------------------------------------------------------------
+# 2. GITHUB REPOSITORY INTEGRATION
+# ------------------------------------------------------------
+
+repo_url = "https://github.com/swapanmallicksmhi/diffusion-models-research"
+
+repo_name = "swapanmallicksmhi/diffusion-models-research"
+
+edit_uri = "edit/main/docs/"
+
+
+# ------------------------------------------------------------
+# 3. CUSTOM SCIENTIFIC STYLING
+# ------------------------------------------------------------
+
+# Paths are relative to docs/
+
+extra_css = [
+    "stylesheets/extra.css",
+]
+
+extra_javascript = [
+    "javascripts/mathjax.js",
+    "https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js",
+]
+
+
+# ------------------------------------------------------------
+# 4. WEBSITE NAVIGATION
+# ------------------------------------------------------------
+
+# Only files that already exist in the repository are listed.
+# Add new chapter pages as they are created.
+
+nav = [
+
+    { "Home" = "index.md" },
+
+    { "Foundations" = [
+        "foundations/index.md",
+    ] },
+
+    { "DDPM" = [
+        "ddpm/index.md",
+    ] },
+
+    { "Score-Based Models" = [
+        "score-based/index.md",
+    ] },
+
+    { "Data Assimilation" = [
+        "data-assimilation/index.md",
+    ] },
+
+    { "Applications" = [
+        "applications/index.md",
+    ] },
+
+    { "Reading Lists" = [
+        "reading-lists/index.md",
+    ] },
+
+]
+
+
+# ------------------------------------------------------------
+# 5. THEME AND WEBSITE FEATURES
+# ------------------------------------------------------------
+
+[project.theme]
+
+language = "en"
+
+# Modern scientific typography
+font.text = "Inter"
+font.code = "JetBrains Mono"
+
+# Documentation features
+features = [
+
+    # Fast navigation between research chapters
+    "navigation.instant",
+    "navigation.instant.progress",
+
+    # Main research categories as navigation tabs
+    "navigation.tabs",
+    "navigation.tabs.sticky",
+
+    # Section organization
+    "navigation.sections",
+    "navigation.indexes",
+
+    # Highlight the currently active section
+    "navigation.tracking",
+
+    # Show navigation path and return-to-top control
+    "navigation.path",
+    "navigation.top",
+
+    # Follow the active heading in the contents sidebar
+    "toc.follow",
+
+    # GitHub integration
+    "content.action.edit",
+    "content.action.view",
+
+    # Copy buttons for Python, Bash, and LaTeX examples
+    "content.code.copy",
+
+]
+
+
+# ------------------------------------------------------------
+# 6. LIGHT AND DARK COLOR SCHEMES
+# ------------------------------------------------------------
+
+# Scientific blue / cyan light theme
+
+[[project.theme.palette]]
+
+scheme = "default"
+primary = "indigo"
+accent = "cyan"
+
+toggle.icon = "lucide/sun"
+toggle.name = "Switch to dark mode"
+
+
+# Dark theme for comfortable reading
+
+[[project.theme.palette]]
+
+scheme = "slate"
+primary = "indigo"
+accent = "cyan"
+
+toggle.icon = "lucide/moon"
+toggle.name = "Switch to light mode"
+
+
+# ------------------------------------------------------------
+# 7. ICON CONFIGURATION
+# ------------------------------------------------------------
+
+[project.theme.icon]
+
+logo = "lucide/book-open"
+repo = "fontawesome/brands/github"
+
+edit = "material/pencil"
+view = "material/eye"
+
+
+# ------------------------------------------------------------
+# 8. MARKDOWN EXTENSIONS
+# ------------------------------------------------------------
+
+[project.markdown_extensions]
+
+# Standard scientific writing
+abbr = {}
+admonition = {}
+attr_list = {}
+def_list = {}
+footnotes = {}
+tables = {}
+
+# Table of contents
+toc.permalink = true
+toc.toc_depth = 3
+
+# LaTeX / MathJax equations
+pymdownx.arithmatex.generic = true
+
+# Code blocks with syntax highlighting
+pymdownx.highlight = {}
+pymdownx.superfences = {}
+pymdownx.inlinehilite = {}
+
+# Scientific text formatting
+pymdownx.details = {}
+pymdownx.mark = {}
+pymdownx.tilde = {}
+pymdownx.caret = {}
+pymdownx.keys = {}
+
+# Grids, figure captions and organized content
+pymdownx.blocks.caption = {}
+
+# Content tabs
+pymdownx.tabbed.alternate_style = true
+
+# Task lists
+pymdownx.tasklist.custom_checkbox = true
+
+# Icons and emoji support
+pymdownx.emoji.emoji_index = "zensical.extensions.emoji.twemoji"
+pymdownx.emoji.emoji_generator = "zensical.extensions.emoji.to_svg"
+
+
+# ============================================================
+# END OF CONFIGURATION
+# ============================================================
